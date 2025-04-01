@@ -37,30 +37,3 @@ class Dog(Animal):
 
 def feed_animals(animals: List[Animal]) -> int:
     return sum(animal.feed() for animal in animals)
-
-
-lion = Animal("Lion", 25)
-lion.print_name()
-food_points = lion.feed()
-print(food_points)
-print(lion.is_hungry)
-print(lion.feed())
-
-cat = Cat("Cat")
-cat.print_name()
-cat.feed()
-
-cat2 = Cat("Cat", False)
-print(cat2.feed())
-cat2.catch_mouse()
-
-dog = Dog("Dog")
-dog.print_name()
-dog.feed()
-
-dog2 = Dog("Dog", False)
-print(dog2.feed())
-dog2.bring_slippers()
-
-animals = [lion, cat, cat2, dog, dog2]
-print(feed_animals(animals))
